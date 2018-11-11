@@ -1,0 +1,125 @@
+<!--Author: Peter Santiago
+Date: 11.05.2018
+Purpose: The Dream Team Game
+Features: This code was built on JS, HTML, HTML5, CSS, CSS, Bootstrap, Firebase -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Dream Team Game</title>
+
+  <!-- Bootstrap Materialize Stack  -->
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="icon" type="image/ico" href="assets/images/american-football.png">
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Sticky Header  -->
+
+  <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/american-football.png" width="52" height="52" alt="">
+        <p class="navbar-text navbar-right">Signed in as <a href="" class="navbar-link" id="playing-as">Player</a></p>
+      </a>
+    </div>
+  </nav>
+
+  <!-- NLF betting container. Invisible on load, Visible during bets  -->
+
+  <div class="nflcontainer-bets">
+    <div class="jumbotron">
+      <div class="nflbets-stats">
+      <span class="bet-header">Place Your Token Bets: Max 999 Per Team</span>
+      <div class="bet-pot">
+      <span class="bet-pot-tokens">NFL Tokens Earned: </span>
+      <span class="bet-pot-amount" id="tokens-earned">5000</span>
+      </div>
+      </div>
+        
+
+      <table id="betting-board" class="table table-hover table-sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>Prev Stats</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Draws</th>
+                <th>Earnings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Dallas Cowboys</td>
+                <td>5-1-0</td>
+                <td><input class="form-control col-xs-2" id="wins-1" value="0"></td>
+                <td><input class="form-control col-xs-2" id="loss-1" value="0"></td>
+                <td><input class="form-control col-xs-2" id="draw-1" value="0"></td>
+                <td id="earn-1">0</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Green Bay Packers</td>
+                <td>4-4-0</td>
+                <td><input class="form-control col-xs-2" id="wins-2" value="0"></td>
+                <td><input class="form-control col-xs-2" id="loss-2" value="0"></td>
+                <td><input class="form-control col-xs-2" id="draw-2" value="0"></td>
+                <td id="earn-2">0</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Chicago Bears</td>
+                <td>3-1-2</td>
+                <td><input class="form-control col-xs-2" id="wins-3" value="0"></td>
+                <td><input class="form-control col-xs-2" id="loss-3" value="0"></td>
+                <td><input class="form-control col-xs-2" id="draw-3" value="0"></td>
+                <td id="earn-3">0</td>
+              </tr>
+            <tr>
+                <th scope="row">Total Earnings</th>
+                <td id="totalearnings">0</td>
+            </tr>
+            </tbody>
+            </table>
+            <a href="teams.html"><button class="btn btn-primary my-2 my-sm-0 go-to-teams">Back</button></a>
+            <button class="btn btn-primary my-2 my-sm-0 place-bets" id="bet-this" type="submit">Place Bets</button>
+            <!--Write to DB here -->
+            <button class="btn btn-primary my-2 my-sm-0 reset-bets" id="reset-this" type="submit">Reset</button>
+      <p class="lead">
+      </p>
+    </div>
+  </div>
+
+  <!-- Sticky Footer  -->
+
+  <footer class="footer">
+    <div class="container">
+      <span class="copyright-text">Dream Team Betting LLC &copy; 2018</span>
+    </div>
+  </footer>
+
+  <!-- Script package-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+  <script src="assets/javascript/simplemask.js"></script>
+  <script src="assets/javascript/simplemask.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/user.js"></script>
+
+</body>
+</html>

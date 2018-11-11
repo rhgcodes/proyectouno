@@ -1,0 +1,75 @@
+<!--Author: Peter Santiago
+Date: 11.05.2018
+Purpose: The Dream Team Game - Welcome Page
+Features: This code was built on JS, HTML, HTML5, CSS, CSS, Bootstrap, Firebase -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Dream Team Game - Welcome</title>
+  <!-- Bootstrap Materialize Stack  -->
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="icon" type="image/ico" href="assets/images/american-football.png">
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+</head>
+
+<body>
+  <!-- Sticky Header  -->
+  <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/american-football.png" width="52" height="52" alt="">
+      </a>
+      <!-- <form class="form-inline">
+      <input class="form-control mr-sm-2" type="registration" placeholder="" aria-label="player_alias" value="testuser">
+      <button class="btn btn-primary my-2 my-sm-0 playnow">Play!</button>
+      </form> -->
+      <div class="user-login form-inline">
+          <span class="bet-pot-tokens"><input class="form-control mr-sm-2" type="registration" placeholder="" aria-label="player-alias" id="new-player" value="testuser2018"></span>
+          <span class="bet-pot-amount"><a href="teams.html"><button class="btn btn-primary my-2 my-sm-0 register-me">Play!</button></a></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- NFL Welcome/Splash Container. Visible on load, Invisible during bets  -->
+
+  <div class="nflcontainer-welcome">
+    <div class="jumbotron">
+      <h1 class="display-4">The Dream Team Game</h1>
+      <p class="lead">Online Weekly NFL Team Standing Betting.</p>
+      <hr class="my-4">
+      <p>Select 6 football teams, and place token bets on either win, lose or draw. Outcomes are determined weekly and
+        rewards are alloted based on odds. Enter in your user ID to place your bets for the week. </p>
+      <p class="lead">
+      </p>
+    </div>
+  </div>
+
+    <!-- Team Selection DIV   -->
+
+    <!-- Team Bets DIV   -->
+
+  <!-- Sticky Footer  -->
+
+  <footer class="footer">
+    <div class="container">
+      <span class="copyright-text">Dream Team Betting LLC &copy;2018</span>
+    </div>
+  </footer>
+
+  <!-- Script package-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+  <script src="assets/javascript/game.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!--Author: Peter Santiago
+Date: 11.05.2018
+Purpose: The Dream Team Game - Team Roster
+Features: This code was built on JS, HTML, HTML5, CSS, CSS, Bootstrap, Firebase -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Dream Team Game - Team Roster</title>
+
+    <!-- Bootstrap Materialize Stack  -->
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/ico" href="assets/images/american-football.png">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Sticky Header  -->
+
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/american-football.png" width="52" height="52" alt="">
+                <p class="navbar-text navbar-right">Signed in as <a href="" class="navbar-link" id="playing-as">Player</a></p>
+            </a>
+        </div>
+    </nav>
+
+    <!-- NLF betting container. Invisible on load, Visible during bets  -->
+
+    <div class="nflcontainer-bets">
+        <div class="jumbotron">
+            <div class="nflbets-stats">
+                <span class="bet-header">Place Your Token Bets: Max 999 Per Team</span>
+                <div class="bet-pot">
+                    <span class="bet-pot-tokens">Earned NFL Tokens: </span>
+                    <span class="bet-pot-amount">5000</span>
+                </div>
+            </div>
+
+            <table id="tablePreview" class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>Prev Stats</th>
+                        <th>Odds</th>
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Candidate Team 1</td>
+                        <td>5-1-0</td>
+                        <td id=odds-1>2</td>
+                        <td id=place-bets-1><a href="bets.html"><button class="btn btn-primary my-2 my-sm-0 go-to-bets">Select</button></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Candidate Team 2</td>
+                        <td>3-1-1</td>
+                        <td id=odds-1>2</td>
+                        <td id=place-bets-1><a href="bets.html"><button class="btn btn-primary my-2 my-sm-0 go-to-bets">Select</button></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Candidate Team 3</td>
+                        <td>3-1-0</td>
+                        <td id=odds-1>2</td>
+                        <td id=place-bets-1><a href="bets.html"><button class="btn btn-primary my-2 my-sm-0 go-to-bets">Select</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="index.html"><button class="btn btn-primary my-2 my-sm-0 go-to-home">Back</button></a>
+            <!-- <button class="btn btn-primary my-2 my-sm-0 resetbets" type="submit">Back</button> -->
+            <p class="lead">
+            </p>
+        </div>
+    </div>
+
+    <!-- Sticky Footer  -->
+
+    <footer class="footer">
+        <div class="container">
+            <span class="copyright-text">Dream Team Betting LLC &copy; 2018</span>
+        </div>
+    </footer>
+
+    <!-- Script package-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+    <script src="assets/javascript/simplemask.js"></script>
+    <script src="assets/javascript/simplemask.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/user.js"></script>
+
+</body>
+
+</html>
